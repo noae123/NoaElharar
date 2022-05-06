@@ -1,0 +1,238 @@
+:root{
+    --bcolor: #fedcc5;
+    --pink: #FF5F6D;
+    --innerInput: #FDF7F4;
+    --font1: 'Averia Sans Libre', cursive;
+    --font2: 'Ruluko', sans-serif;
+    --font3: 'Martel Sans', sans-serif;
+    --bStyle: 2px solid #D9B1A3;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--bcolor);
+    background-image: url("../static/Repeat Grid 1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+header{
+    grid-area: header;
+    display: inline-block;
+}
+
+.logo{
+    width: 24px;
+    height: 24px;
+}
+
+.logoText{
+    margin-left:0.75vw;
+    color: var(--pink);
+    cursor: default;
+    font-size: 24px;
+}
+
+aside{
+    padding-top: 12vh;
+    grid-area: aside;
+}
+
+aside span{
+    font-family: var(--font1);
+    font-size: 5vw;
+    text-transform: uppercase;
+    line-height: 5.5vw;
+    cursor: default;
+}
+
+.pinkWord{
+    color: var(--pink);
+    display: inline;
+}
+
+button{
+    margin-top:6vh;
+    background: white;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    height: 11.2vh;
+    width:28.365vw;
+    border-radius: 5vw;
+    box-shadow: 0 3px 6px rgba(124, 28, 36, 0.16);
+}
+
+button span{
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font1);
+    color: var(--pink);
+    font-size: 2vw;
+}
+
+figure{
+    float:right;
+    margin: 0 10vw 0 0;
+    grid-area: figure;
+    animation-name: floater;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floater {
+    0%   {margin-top: 4vh;}
+    20%  {margin-top: 0;}
+    60%  {margin-top: 8vh;}
+    85%  {margin-top: 0;}
+    100%  {margin-top: 4vh;}
+}
+
+figure img{
+    height: 80vh;
+    width: 46vw;
+}
+
+.contactUsPhrase{
+    padding-top: 4vh;
+    grid-area: contactUsPhrase;
+}
+
+h1{
+    margin: 0;
+    font-family: var(--font1);
+    font-size: 36px;
+    cursor: default;
+}
+
+h2{
+    padding-right:12.7vw;
+    margin: 2vh 0 0 0 ;
+    font-family: var(--font2);
+    font-size: 24px;
+    cursor: default;
+}
+
+h3{
+    margin: 0;
+    font-family: var(--font1);
+    font-size: 22px;
+    cursor: default;
+    display: inline-block;
+    color: var(--pink);
+    padding-right: 2vw;
+}
+
+.formArticle{
+    margin-top: 6vh ;
+    padding-right:12.7vw;
+    grid-area: formArticle;
+}
+
+form{
+    font-family: var(--font3);
+    margin: 0 auto;
+    position: relative;
+}
+
+form div{
+    display: inline-block;
+}
+
+input{
+    height: 32px;
+    width: 33vw;
+}
+
+.formInput{
+    display: block;
+    border: var(--bStyle);
+    font-size: 16px;
+    padding-left: 6px;
+    border-radius: 10px;
+    background-color: var(--innerInput);
+}
+
+.floatRight{
+    float: right;
+}
+
+.marginTop{
+    margin-top: 4vh;
+}
+
+.fullWidth{
+    width: 100%;
+}
+
+.innerFullWidth{
+    width: calc(100% - 10px);
+}
+
+textarea{
+    resize: none;
+}
+
+.justifyCenter{
+    justify-content: center;
+}
+
+.checkBox{
+    vertical-align: middle;
+    width: 28px;
+    height: 28px;
+    border-radius: 10px;
+    background-color: var(--bcolor);
+    display: inline;
+}
+
+label{
+    vertical-align: middle;
+}
+
+.submitButton{
+    color: var(--pink);
+    font-size: 2vw;
+    font-family: 'Averia Sans Libre', cursive;
+    text-transform: uppercase;
+    margin-top:4vh;
+    margin-bottom:4vh;
+    background: white;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    height: 11.2vh;
+    width:28.365vw;
+    border-radius: 5vw;
+    box-shadow: 0 3px 6px rgba(124, 28, 36, 0.16);
+}
+
+nav{
+    grid-area: nav;
+    display: inline-block;
+    padding-top: calc(24px - 22px);
+}
+
+.grid-container{
+    display: grid;
+    padding-left: 12.7vw;
+    padding-top: 3.33vh;
+}
+
+.home-grid{
+    grid-template-columns: 40% auto;
+    grid-template-areas: 'header nav'
+    'aside figure';
+}
+
+.form-grid{
+    grid-template-columns: 40% auto;
+    grid-template-areas: 'header nav'
+    'contactUsPhrase contactUsPhrase'
+    'formArticle formArticle';
+}
