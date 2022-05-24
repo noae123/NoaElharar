@@ -9,8 +9,12 @@ app = Flask(__name__)
 def hello_world():
     return render_template('home.html')
 
-@app.route('/contact')
-def foo():
+@app.route('/templates/home.html')
+def home():
+    return render_template('home.html')
+
+@app.route('/templates/contact.html')
+def contact():
     return render_template('contact.html')
 
 if __name__ == '__main__':
